@@ -1,0 +1,2 @@
+name,last_name,mobile_number,age = input("enter upur name surname,mobile number,age").split(",")
+print(f"your name is {name} surname is {last_name} your mobile number is {mobile_number} your age is {age}")
