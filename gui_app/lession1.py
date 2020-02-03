@@ -9,6 +9,8 @@
 # window = Th()
 
 #method3
+import os
+from csv import DictWriter
 from tkinter import ttk
 import tkinter as tk
 window = tk.Tk()
@@ -77,6 +79,27 @@ def button_click_function():
     all_details = (f"your name is {names} \n your surname is {surnames} \n your email is {emails} \n your gender is {genders} \n your usertype is {user_teacher_student}")
     new_label_of_all_detail = ttk.Label(window,text = all_details)
     new_label_of_all_detail.grid(row = 7,column = 0)
+    
+    with open("zzzz.txt" , "a") as file:
+        file.write(f"{names},{surnames},{emails},{genders},{user_teacher_student},{checked}")
+    
+    with open("vvvzz.csv","a",newlines="") as file:
+        new_data = DictWriter(file,fieldnames = ["useranme","surname","email","Gender","type","checkbox"])
+        if os.start("vvvzz.csv").st_size == 0:
+            new_data.writeheader()
+        new_data.writerow({
+            "useranme":names,
+            "surname":surnames,
+            "email":emails,
+            "Gender":genders,
+            "type":user_teacher_student,
+            "checkbox":checked,
+        })
+    name_entry_box.delete(0,tk.END)
+    surname_entry_box.delete(0,tk.END)
+    email_entry_box.delete(0,tk.END)
+    
+
 new_submit_button = ttk.Button(window,text = "Submit",command = button_click_function)
 new_submit_button.grid(row = 6,column = 1)
 window.mainloop()
