@@ -4,8 +4,6 @@ from tkinter import ttk
 from tkinter import font,colorchooser,filedialog,messagebox
 import os 
 # from PIL import ImageTk
-
-
 main_application = tk.Tk()
 main_application.geometry("800x600")
 main_application.title("Ms Notepad")
@@ -13,11 +11,11 @@ main_application.title("Ms Notepad")
 #menu creation
 main_menu = tk.Menu()
 #file menu and it's submenu
-new_icon = tk.PhotoImage(file = "icon2/new.png")
-open_icon = tk.PhotoImage(file = "icon2/open.png")
-save_icon = tk.PhotoImage(file = "icon2/save.png")
-save_as_icon = tk.PhotoImage(file = "icon2/save_as_icon.png")
-exit_icon = tk.PhotoImage(file = "icon2/exit.png")
+new_icon = tk.PhotoImage(file = "icons2/new.png")
+open_icon = tk.PhotoImage(file = "icons2/open.png")
+save_icon = tk.PhotoImage(file = "icons2/save.png")
+save_as_icon = tk.PhotoImage(file = "icons2/save_as.png")
+exit_icon = tk.PhotoImage(file = "icons2/exit.png")
 
 # new_icon = ""
 # open_icon = "" 
@@ -35,11 +33,11 @@ file.add_command(label = "Exit",image = exit_icon,compound = tk.LEFT,accelerator
 
 #Edit menu and it's submenu
 
-copy_icon = tk.PhotoImage(file = "icon2/copy.png")
-paste_icon = tk.PhotoImage(file = "icon2/paste.png")
-cut_item_icon = tk.PhotoImage(file = "icon2/cut.png")
-clear_icon = tk.PhotoImage(file = "icon2/clear_all.png")
-find_icon = tk.PhotoImage(file = "icon2/find.png")
+copy_icon = tk.PhotoImage(file = "icons2/copy.png")
+paste_icon = tk.PhotoImage(file = "icons2/paste.png")
+cut_item_icon = tk.PhotoImage(file = "icons2/cut.png")
+clear_icon = tk.PhotoImage(file = "icons2/clear_all.png")
+find_icon = tk.PhotoImage(file = "icons2/find.png")
 
 # copy_icon = "" 
 # paste_icon = "" 
@@ -58,8 +56,8 @@ edit.add_command(label = "Find",image = find_icon,compound = tk.LEFT,accelerator
 
 
 # View menu and it's submenu
-tool_bar = tk.PhotoImage(file = "icon2/tool_bar.png")
-status_bar = tk.PhotoImage(file = "icon2/cstatus_bar.png")
+tool_bar = tk.PhotoImage(file = "icons2/tool_bar.png")
+status_bar = tk.PhotoImage(file = "icons2/status_bar.png")
 
 # tool_bar = "" 
 # status_bar = "" 
@@ -71,12 +69,12 @@ view.add_checkbutton(label = "Status Bar",onvalue = True,image = status_bar,comp
 
 #Color menu and it's submenu
 
-light_theme = tk.PhotoImage(file = "icon2/light_default.png")
-light_plus_icon = tk.PhotoImage(file = "icon2/light_plus.png")
-dark_theme = tk.PhotoImage(file = "icon2/dark.png")
-red_theme = tk.PhotoImage(file = "icon2/red.png")
-monokia_theme = tk.PhotoImage(file = "icon2/monokia.png")
-night_theme = tk.PhotoImage(file = "icon2/night_blue.png")
+light_theme = tk.PhotoImage(file = "icons2/light_default.png")
+light_plus_icon = tk.PhotoImage(file = "icons2/light_plus.png")
+dark_theme = tk.PhotoImage(file = "icons2/dark.png")
+red_theme = tk.PhotoImage(file = "icons2/red.png")
+monokia_theme = tk.PhotoImage(file = "icons2/monokai.png")
+night_theme = tk.PhotoImage(file = "icons2/night_blue.png")
 
 # light_theme = "" 
 # light_plus_icon = "" 
@@ -104,7 +102,7 @@ for i in color_dict:
 
 # ToolBars Label
 tool_bar_label = ttk.Label(main_application)
-tool_bar_label.pack(side = tk.TOP,fill = tk.x)
+tool_bar_label.pack(side = tk.TOP,fill = tk.X)
 font_tuple = tk.font.families()
 font_family = tk.StringVar
 font_box = ttk.Combobox(tool_bar_label,width= 30,textvariable=font_family,state="readonly")
