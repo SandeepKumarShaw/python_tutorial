@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import ttk 
 from tkinter import font,colorchooser,filedialog,messagebox
 import os 
-# from PIL import ImageTk
+from PIL import ImageTk
 
 
 main_application = tk.Tk()
